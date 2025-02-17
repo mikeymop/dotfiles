@@ -1,0 +1,21 @@
+#####################
+# Gnome specific configuration
+#####################
+config-file = ?gnome-config
+
+#####################
+# Favorite defaults
+#####################
+cursor-style = block
+cursor-style-blink = false
+# cursor-style-blink = "DECSCUSR"
+
+shell-integration = detect
+font-family = Hasklig
+font-size = 12
+
+#####################
+# Colors
+#####################
+window-theme = system
+theme = light:Adwaita,dark:Cobalt2

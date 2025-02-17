@@ -1,0 +1,75 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 3
+final_space = true
+console_title_template = '{{ .PWD }}'
+
+# Defines a prompt block containing a path segment.
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+
+[[blocks.segments]]
+type = 'path'
+style = 'plain'
+background = 'transparent'
+foreground = 'green'
+template = '{{ .Path }}'   # Removes space before path
+
+[blocks.segments.properties]
+style = 'powerlevel'
+
+# Git integration
+[[blocks.segments]]
+type = 'git'
+style = 'plain'
+foreground = '#6c6c6c'
+background = 'transparent'
+# Show * if changes, and cyan arrows for working tree status
+template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}↓{{ end }}{{ if gt .Ahead 0 }}↑{{ end }}</>'
+
+[blocks.segments.properties]
+branch_icon = ''    # Remove granch icon
+commit_icon = '@'   # Replace detached icon
+fetch_status = true
+
+[[blocks]]
+type = 'rprompt'
+overflow = 'hidden'
+
+[[blocks.segments]]
+type = 'executiontime'
+style = 'plain'
+foreground = 'yellow'
+background = 'transparent'
+template = '{{ .FormattedMs }}'
+#template = '{{ div .Ms 1000 }}s' # Rounded to secs
+
+[blocks.segments.properties]
+threshold = 5000
+style = 'austin'
+
+# Makes Prompt exist on separate line from Path segment
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+foreground = 'white'
+foreground_templates = [
+    "{{if gt .Code 0}}red{{end}}",
+    "{{if eq .Code 0}}green{{end}}",
+]
+background = 'transparent'
+template = '{{ if eq .Root true}}#{{else}}${{end}}'
+
+[transient_prompt]
+background = 'transparent'
+foreground_templates = [
+    "{{if gt .Code 0}}red{{end}}",
+    "{{if eq .Code 0}}green{{end}}",
+]
+template = '{{ if eq .Root true}}#{{else}}${{end}} '
