@@ -5,6 +5,11 @@ They are stored in the form of [stow](https://www.gnu.org/software/stow/) packag
 
 ## Usage
 
+If you have `just` installed
+```shell
+just install zsh # install the zsh package
+```
+
 ```shell
 stow *   # recreate all package dotfiles
 stow zsh # recreate only zsh package dotfiles
