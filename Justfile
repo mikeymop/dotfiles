@@ -12,7 +12,7 @@ install package:
     #!/usr/bin/env bash
 
     @if $(test "{{os}}" = "Linux"); then \
-        stow -v -R -d $PWD -t $HOME {{package}}; \
+        stow -v -R -d $PWD -t $HOME --ignore=".*.mac.*" {{package}}; \
     elif $(test "{{os}}" = "Darwin"); then \
         echo "Hello Mac"; \
     else \
