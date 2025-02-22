@@ -1,5 +1,5 @@
 if [[ $OSTYPE == 'linux'* ]]; then
-    source $HOME/.config/denv/zsh-linuxrc.zsh
+    source $HOME/.config/denv/zshrc.linux.zsh
 fi
 
 if [[ $OSTYPE == 'darwin'* ]]; then
