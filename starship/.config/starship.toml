@@ -22,8 +22,8 @@ truncation_length = 1
 fish_style_pwd_dir_length = 1
 
 [character]
-success_symbol = "[❯](green)"
-error_symbol = "[❯](red)"
+success_symbol = '[\$](green)' # "[❯](green)"
+error_symbol = '[\$](red)'     # "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
@@ -47,6 +47,7 @@ style = "bright-black"
 
 [cmd_duration]
 format = "[$duration]($style) "
+show_milliseconds = true
 style = "yellow"
 
 [python]
