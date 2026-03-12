@@ -1,6 +1,6 @@
 gtk-adwaita = true
 gtk-wide-tabs = true
 shell-integration = zsh
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,sudo
 title = ""
 theme = light:Adwaita,dark:Adwaita Dark
