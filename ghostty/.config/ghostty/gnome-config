@@ -1,6 +1,9 @@
-gtk-adwaita = true
+gtk-toolbar-style = flat
 gtk-wide-tabs = true
-shell-integration = zsh
-shell-integration-features = no-cursor,sudo
+shell-integration = detect
+shell-integration-features = no-cursor,sudo,ssh-env,no-ssh-terminfo
+# Due to a bug in gtk window decorations, these wont exactly match 92x24
+window-height = 27
+window-width = 92
 title = ""
 theme = light:Adwaita,dark:Adwaita Dark
