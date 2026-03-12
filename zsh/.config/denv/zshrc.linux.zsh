@@ -6,10 +6,11 @@ export PATH
 
 # Shell Plugins
 # enable oh-my-posh using config
-eval "$(oh-my-posh init zsh --config $HOME/.config/omp/linux.omp.toml)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/omp/linux.omp.toml)"
 
 # Dev environment
 source $HOME/.config/denv/zsh-dev.zsh
+eval "$(starship init zsh)"
 
 # Keymaps
 # from bindkey -M main
@@ -18,10 +19,12 @@ bindkey "^[[1;5C" forward-word  # ctrl + ->
 bindkey "^[[1;5D" backward-word # ctrl + <-
 bindkey '^[[H' beginning-of-line # replace ctrl + a cursor start of line
 bindkey '^[[F' end-of-line # replace ctrl + e cursor end of line
+bindkey "^[[3~" delete-char
 
 # Aliases
 alias wlc="wl-copy"
 alias cwl="code-insiders --enable-features=UseOzonePlatform --ozone-platform=wayland $1"
+alias docker="podman"
 
 # Auto complete
 autoload -Uz compinit && compinit

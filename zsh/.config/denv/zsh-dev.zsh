@@ -3,6 +3,9 @@ export GOPATH="$HOME/go"
 export GOBIN="$HOME/go"
 export PATH="$HOME/go/:$PATH"
 
+# Rustup default Cargo location
+. "$HOME/.cargo/env"
+
 # Kubectl Customization
 alias k="kubectl"
 

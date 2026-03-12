@@ -7,22 +7,73 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "features": {
-    "inline_completion_provider": "none"
+  "gutter": {
+    "folds": true,
+    "breakpoints": true
   },
-  "active_pane_magnification": 1.12,
+  "semantic_tokens": "off",
+  "completions": {
+    "lsp_fetch_timeout_ms": 0
+  },
+  "colorize_brackets": true,
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "indent_aware"
+  },
+  "lsp_document_colors": "inlay",
+  "relative_line_numbers": "disabled",
+  "sticky_scroll": {
+    "enabled": true
+  },
   "base_keymap": "VSCode",
   "buffer_font_size": 16,
   "buffer_font_family": "Hasklig",
   "show_completions_on_input": false,
   "show_whitespaces": "boundary",
+  "hover_popover_enabled": true,
+  "inlay_hints": {
+    "show_value_hints": true,
+    "show_background": true,
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hoverKind": "FullDocumentation",
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true,
+        },
+      },
+    },
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "onSave": false,
+          },
+        },
+      },
+    },
+  },
   "telemetry": {
-    "metrics": false
+    "metrics": false,
   },
   "theme": {
     "mode": "system",
     "light": "Github Light",
-    "dark": "Ayu Dark"
+    "dark": "GitHub Dark Dimmed",
   },
-  "ui_font_size": 18
+  "terminal": {
+    "font_family": "Hasklig",
+  },
+  "ui_font_size": 18,
 }
