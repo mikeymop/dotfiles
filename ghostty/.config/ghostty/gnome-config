@@ -1,4 +1,3 @@
-gtk-adwaita = true
 gtk-wide-tabs = true
 shell-integration = zsh
 shell-integration-features = no-cursor,sudo

@@ -10,6 +10,10 @@ def kout [] {
   detect columns
 }
 
+def cwl [path: string] {
+  code-insiders --enable-features=UseOzonePlatform --ozone-platform=wayland $path
+}
+
 # Quickly switch Kube contexts, or print the current context
 def chk [ctx?: string] {
   match $ctx {
