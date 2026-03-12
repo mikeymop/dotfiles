@@ -29,6 +29,9 @@ def chn [ns?: string] {
   }
 }
 
+# For cargo support
+source $"($nu.home-path)/.cargo/env.nu"
+
 # Starship
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
