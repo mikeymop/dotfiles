@@ -3,8 +3,8 @@
 
 format = """
 $username\
-$hostname\
 $directory\
+$hostname\
 $git_branch\
 $git_state\
 $git_status\
@@ -44,6 +44,15 @@ stashed = "≡"
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
 style = "bright-black"
+
+[hostname]
+ssh_only = false
+# Trigger the hostname to show when in an ssh connection or toolbx container
+detect_env_vars = ['SSH_CONNECTION', 'TOOLBOX_PATH']
+format = '[@](bright-black)[$hostname](dimmed cyan) '
+# Add the Nerd Font ssh symbol TODO: Make nerd fonts work
+# ssh_symbol = " "
+# format = '[$ssh_symbol](dimmed cyan) [on](bright-black) [$hostname](dimmed cyan) '
 
 [cmd_duration]
 format = "[$duration]($style) "
