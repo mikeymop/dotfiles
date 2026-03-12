@@ -6,7 +6,10 @@ export PATH
 
 # Shell Plugins
 # enable oh-my-posh using config
-eval "$(oh-my-posh init zsh --config $HOME/.config/omp/linux.omp.toml)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/omp/linux.omp.toml)"
+
+# Starship
+eval "$(starship init zsh)"
 
 # Dev environment
 source $HOME/.config/denv/zsh-dev.zsh

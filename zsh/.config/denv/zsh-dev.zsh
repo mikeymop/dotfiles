@@ -3,6 +3,10 @@ export GOPATH="$HOME/go"
 export GOBIN="$HOME/go"
 export PATH="$HOME/go/:$PATH"
 
+# Add Cargo to PATH
+# source $"($nu.home-path)/.cargo/env.nu"
+. "$HOME/.cargo/env"
+
 # Kubectl Customization
 alias k="kubectl"
 
