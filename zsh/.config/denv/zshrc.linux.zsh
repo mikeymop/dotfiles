@@ -17,10 +17,13 @@ source $HOME/.config/denv/zsh-dev.zsh
 # Keymaps
 # from bindkey -M main
 # bindkey '^[v' .describe-key-briefly can help you print them
-bindkey "^[[1;5C" forward-word  # ctrl + ->
-bindkey "^[[1;5D" backward-word # ctrl + <-
+bindkey "^[[1;5C" forward-word   # ctrl + ->
+bindkey "^[[1;5D" backward-word  # ctrl + <-
 bindkey '^[[H' beginning-of-line # replace ctrl + a cursor start of line
-bindkey '^[[F' end-of-line # replace ctrl + e cursor end of line
+bindkey '^[[F' end-of-line       # replace ctrl + e cursor end of line
+bindkey '^H' backward-kill-word  # ctrl + backspace erased word before cursor
+bindkey '^[[3~' delete-char      # del key to deletes char after cursor
+bindkey '^[[3;5~' delete-word    # ctrl + del deletes word after cursor
 
 # Aliases
 alias wlc="wl-copy"
